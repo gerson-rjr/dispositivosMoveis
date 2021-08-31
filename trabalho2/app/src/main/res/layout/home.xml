@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="154dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="280dp"
+        android:layout_height="303dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/t_passado" />
+
+    <Button
+        android:id="@+id/angry_btn"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/buttonshape"
+        android:text="Button"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+</LinearLayout>
