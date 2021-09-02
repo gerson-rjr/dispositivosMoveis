@@ -10,7 +10,7 @@ public class ConexSQlite extends SQLiteOpenHelper {
 
     private static ConexSQlite INSTANCIA_CONNECT;
     private static final int VERSAO_DB = 1;
-    private static final String NOME_DB= "bd_To_Passado";
+    private static final String NOME_DB= "bd_To_Passado1";
 
     public ConexSQlite( Context context) {
         super(context, NOME_DB, null, VERSAO_DB);

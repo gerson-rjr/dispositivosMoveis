@@ -23,7 +23,7 @@ public class DiscDAO {
             values.put("nota2", dDisciplina.getNota2());
             values.put("media", dDisciplina.getMedia());
 
-            Long idDisciInsert =  db.insert("produto",null,values);
+            Long idDisciInsert =  db.insert("disc",null,values);
             return idDisciInsert;
         }
         catch (Exception e){
