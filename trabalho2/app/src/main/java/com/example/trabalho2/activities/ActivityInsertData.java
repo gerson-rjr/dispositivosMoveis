@@ -2,6 +2,7 @@ package com.example.trabalho2.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.trabalho2.Controller.DiscCTRL;
+import com.example.trabalho2.MainActivity;
 import com.example.trabalho2.R;
 import com.example.trabalho2.db.ConexSQlite;
 import com.example.trabalho2.model.Disciplina;
@@ -49,9 +51,8 @@ public class ActivityInsertData extends AppCompatActivity {
                     long idDisc = discCTRL.saveDiscCtrl(disciplinaNew);
                     if(idDisc >0){
                         Toast.makeText(ActivityInsertData.this, "Disciplina Inserida com sucesso",Toast.LENGTH_LONG).show();
-                    }
-                    else{
-                        Toast.makeText(ActivityInsertData.this,"Disciplina Não pode ser inserida", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(ActivityInsertData.this, ActivityPrintData.class);
+                        startActivity(intent);
                     }
                }
                else{

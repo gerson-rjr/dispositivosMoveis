@@ -10,7 +10,7 @@ public class ConexSQlite extends SQLiteOpenHelper {
 
     private static ConexSQlite INSTANCIA_CONNECT;
     private static final int VERSAO_DB = 1;
-    private static final String NOME_DB= "bd_To_Passado1";
+    private static final String NOME_DB= "bd_To_Passado3";
 
     public ConexSQlite( Context context) {
         super(context, NOME_DB, null, VERSAO_DB);
@@ -28,7 +28,7 @@ public class ConexSQlite extends SQLiteOpenHelper {
         String sqlTabelaDisciplina =
                 "CREATE TABLE IF NOT EXISTS disc" +
                         "(" +
-                        "id INTEGER PRIMARY KEY," +
+                        "id INTEGER," +
                         "nomeA TEXT," +
                         "nomeD TEXT," +
                         "nota1 REAL," +

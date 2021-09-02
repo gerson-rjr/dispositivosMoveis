@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.trabalho2.R;
 
@@ -25,13 +26,26 @@ public class ActivityPrintData extends AppCompatActivity {
         editTextN1    = (EditText) findViewById(R.id.editTextN1);
         editTextN2    = (EditText) findViewById(R.id.editTextN2);
 
+        this.CalcMedia();
 
     }
     public String CalcMedia(){
-        String result = new String("Prezado " + editTextNomeA + " sua media na disciplina " + editTextNomeD + " é: ");
         Double n1 = Double.parseDouble(this.editTextN1.getText().toString());
         Double n2 = Double.parseDouble(this.editTextN2.getText().toString());
         Double result1 = ((n1*2) + (n2*3))/5;
+
+
+        if(result1 > 6 && result1 <= 10){
+            Toast.makeText(ActivityPrintData.this, "Sua media foi: " + result1 + ",você está Aprovado",Toast.LENGTH_LONG).show();
+        }
+        if(result1 < 6 && result1 > 3 ){
+            Toast.makeText(ActivityPrintData.this, "Sua media foi: " + result1 + ",você está em Recuperação",Toast.LENGTH_LONG).show();
+        }
+        else {
+            Toast.makeText(ActivityPrintData.this, "Sua media foi: " + result1 + ",você está Reprovado",Toast.LENGTH_LONG).show();
+        }
+
+        String result = new String("Prezado " + editTextNomeA + " sua media na disciplina " + editTextNomeD + " é: ");
         result += result1.toString();
 
         return result;
