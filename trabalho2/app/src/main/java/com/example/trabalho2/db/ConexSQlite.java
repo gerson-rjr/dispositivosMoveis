@@ -26,7 +26,7 @@ public class ConexSQlite extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String sqlTabelaDisciplina =
-                "CREATE TABLE IF NOT EXISTS produto" +
+                "CREATE TABLE IF NOT EXISTS disc" +
                         "(" +
                         "id INTEGER PRIMARY KEY," +
                         "nomeA TEXT," +
@@ -35,7 +35,7 @@ public class ConexSQlite extends SQLiteOpenHelper {
                         "nota2 REAL," +
                         "media REAL" +
                         ")";
-        SQLiteDatabase.execSQL(sqlTabelaDisciplina);
+        db.execSQL(sqlTabelaDisciplina);
     }
 
     @Override

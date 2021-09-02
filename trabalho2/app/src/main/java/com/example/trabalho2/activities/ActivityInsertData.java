@@ -84,8 +84,8 @@ public class ActivityInsertData extends AppCompatActivity {
             return null;
         }
         if(this.editTextN2.getText().toString().isEmpty() == false){
-            double n2 = Double.parseDouble(this.editTextN1.getText().toString());
-            this.disciplina.setNota1(n2);
+            double n2 = Double.parseDouble(this.editTextN2.getText().toString());
+            this.disciplina.setNota2(n2);
         }
         else{
             return null;

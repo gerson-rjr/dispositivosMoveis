@@ -71,7 +71,4 @@ public class Disciplina {
         this.nomeA = nomeA;
     }
 
-    public double CalcMedia(){
-        return ;
-    }
 }

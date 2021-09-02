@@ -8,8 +8,8 @@ import com.example.trabalho2.model.Disciplina;
 
 public class DiscDAO {
     private  final ConexSQlite conexSQlite;
-    public DiscCTRL(ConexSQlite conexSQlite) {
-        this.conexSQlite = conexSQlite;
+    public DiscDAO(ConexSQlite conexSQlite) {
+         this.conexSQlite = conexSQlite;
     }
 
     public long saveDiscDAO(Disciplina dDisciplina){
@@ -23,7 +23,7 @@ public class DiscDAO {
             values.put("nota2", dDisciplina.getNota2());
             values.put("media", dDisciplina.getMedia());
 
-            Long idDisciInsert =  db.insert("disciplina",null,values);
+            Long idDisciInsert =  db.insert("produto",null,values);
             return idDisciInsert;
         }
         catch (Exception e){

@@ -8,7 +8,7 @@ public class DiscCTRL {
     private final DiscDAO discDAO;
 
     public DiscCTRL(ConexSQlite conexSQlite) {
-        discDAO = new DiscDAO(dConexSQlite);
+        discDAO = new DiscDAO(conexSQlite);
     }
     public long saveDiscCtrl(Disciplina dDisciplina){
         return this.discDAO.saveDiscDAO(dDisciplina);
